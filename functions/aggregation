@@ -14,9 +14,7 @@ SELECT department_id, SUM(salary) AS total_salary
 FROM employees
 GROUP BY department_id
 ORDER BY total_salary DESC
-LIMIT 1;  -- For MySQL & PostgreSQL
--- FETCH FIRST 1 ROW ONLY; -- For Oracle
--- SELECT TOP 1 department_id, SUM(salary) AS total_salary FROM employees GROUP BY department_id ORDER BY total_salary DESC; -- SQL Server
+LIMIT 1; 
 
 -- 4. Determine the highest and lowest salaries for each job role.
 SELECT job_id, MAX(salary) AS max_salary, MIN(salary) AS min_salary
